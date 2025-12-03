@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tablero de Cirugías</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-    <iframe 
-      src="https://script.google.com/macros/s/AKfycbx9CcN_bs1a7VzQ2pF_ZawyHhJNSbR4ntYWzrQA-xUvb3eEOTyHWbD3ka9CMJdB51CKGw/exec"
-      onload="document.getElementById('loader').style.display='none';"
-      allowfullscreen>
-    </iframe>
-  
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbx9CcN_bs1a7VzQ2pF_ZawyHhJNSbR4ntYWzrQA-xUvb3eEOTyHWbD3ka9CMJdB51CKGw/exec"
+    allowfullscreen>
+  </iframe>
 </body>
 </html>
