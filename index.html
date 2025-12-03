@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tablero Estadístico de Cirugías</title>
+  <meta name="description" content="Tablero interactivo en tiempo real con estadísticas de cirugías: KPIs, gráficos, mapa geográfico y detalle por paciente. Desarrollado con Google Apps Script." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Tablero Estadístico de Cirugías" />
+  <meta property="og:description" content="Monitorización en tiempo real de cirugías: estados, tiempos, geografía y eficiencia quirúrgica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tu-usuario.github.io/tu-repositorio" />
+  <meta property="og:image" content="https://i.imgur.com/6XjZ0kZ.png" />
+
+  <!-- Favicon (opcional) -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3050/3050520.png" type="image/png">
+
+  <!-- Estilos -->
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(90deg, #00d4ff, #0099cc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 800;
+    }
+    p.subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-top: 0.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #00b4d8;
+      color: #000;
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      margin-top: 0.8rem;
+    }
+    main {
+      flex: 1;
+      padding: 1rem;
+      max-width: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      background: #000;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.6);
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+    .loader {
+      text-align: center;
+      padding: 3rem;
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 1.8rem; }
+      p.subtitle { font-size: 1rem; }
+      iframe { height: 90vh; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tablero Estadístico de Cirugías</h1>
+    <p class="subtitle">
+      Monitorización en tiempo real • Estadísticas • Mapa geográfico • Eficiencia quirúrgica
+    </p>
+    <div class="badge">
+      <i class="bi bi-activity"></i> Actualización automática desde Google Sheets
+    </div>
+  </header>
+
+  <main>
+    <div class="loader" id="loader">
+      Cargando el tablero interactivo...
+    </div>
+    <iframe 
+      src="https://script.google.com/macros/s/AKfycbx9CcN_bs1a7VzQ2pF_ZawyHhJNSbR4ntYWzrQA-xUvb3eEOTyHWbD3ka9CMJdB51CKGw/exec"
+      onload="document.getElementById('loader').style.display='none';"
+      allowfullscreen>
+    </iframe>
+  </main>
+
+  <footer>
+    © 2025 Tablero de Cirugías • Desarrollado con Google Apps Script • 
+    <a href="https://github.com/tu-usuario/tu-repositorio" target="_blank" style="color:#00b4d8; text-decoration:none;">
+      Ver en GitHub
+    </a>
+  </footer>
+
+  <!-- Bootstrap Icons (opcional, para el ícono en el badge) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.js"></script>
+</body>
+</html>
